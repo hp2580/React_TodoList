@@ -2,7 +2,6 @@ import "./reset.css";
 import "./App.css";
 import { useState } from "react";
 import Template from "./components/Template";
-import TodoList from "./components/TodoList";
 
 const App = () => {
   const [todos, setTodos] = useState([

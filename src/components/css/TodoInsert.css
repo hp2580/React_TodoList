@@ -1,0 +1,55 @@
+.toggleWrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+}
+.toggleWrap .wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.toggleWrap .wrap .bg {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.toggleWrap .wrap form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  background: #fff;
+  padding: 30px;
+  border: 2px solid #f55050;
+  border-radius: 10px;
+}
+.toggleWrap .wrap form input {
+  display: inline-block;
+  padding: 10px 0;
+  font-size: 1.2em;
+  border-bottom: 2px solid #f55050;
+}
+.toggleWrap .wrap form button {
+  width: 30px;
+  height: 30px;
+  font-size: 1.1em;
+  color: #fff;
+  background: #f55050;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.toggleWrap .wrap form .rewrite button {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  font-size: 1.5em;
+}/*# sourceMappingURL=TodoInsert.css.map */

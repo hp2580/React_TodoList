@@ -1,0 +1,12 @@
+.todoItem {
+  text-align: center;
+  font-size: 1.3em;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 7px #f55050;
+  margin-bottom: 20px;
+  position: relative;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -3,7 +3,7 @@ import "./css/Template.css";
 import TodoInsert from "./TodoInsert";
 import TodoList from "./TodoList";
 
-let nextId = 4;
+let nextId = 1;
 const Template = ({ todos, setTodos }) => {
   const [insertToggle, setInsertToggle] = useState(false);
   const [selected, setSelected] = useState(null);

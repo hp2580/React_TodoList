@@ -24,7 +24,8 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 50%;
+      width: 75%;
+      max-width: 750px;
       background: #fff;
       padding: 30px;
       border: 2px solid #f55050;
@@ -32,12 +33,12 @@
       input {
         display: inline-block;
         padding: 10px 0;
-        font-size: 1.2em;
+        font-size: calc(0.7em + 0.8vw);
         border-bottom: 2px solid #f55050;
       }
       button {
-        width: 30px;
-        height: 30px;
+        width: calc(30px + 1vw);
+        aspect-ratio: 1;
         font-size: 1.1em;
         color: #fff;
         background: #f55050;

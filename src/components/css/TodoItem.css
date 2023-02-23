@@ -1,11 +1,14 @@
 .todoItem {
   text-align: center;
-  font-size: 1.3em;
+  font-size: calc(0.7em + 0.8vw);
+  font-weight: 600;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 3px 3px 7px #f55050;
-  margin-bottom: 20px;
+  color: #fff;
+  background: rgba(245, 80, 80, 0.7);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   position: relative;
+  cursor: pointer;
 }
 .todoItem:last-child {
   margin-bottom: 0;

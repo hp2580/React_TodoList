@@ -1,22 +1,28 @@
 .todoList {
+  max-width: 800px;
   width: 80%;
+  height: 60%;
   padding: 30px;
-  height: 500px;
   border: 2px solid #f55050;
   border-radius: 20px;
   position: relative;
+  overflow: hidden;
 }
 .todoList .title {
   display: inline-block;
   font-size: 1.8em;
   font-weight: 600;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
   color: #f55050;
 }
 .todoList .listWrap {
-  height: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+  height: 85%;
   padding: 5px 20px;
   overflow-y: scroll;
+  position: relative;
 }
 .todoList .listWrap::-webkit-scrollbar {
   width: 3px;
@@ -26,16 +32,38 @@
   background: #f55050;
   border-radius: 10px;
 }
+.todoList .listWrap .dummy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  color: rgba(0, 0, 0, 0.5);
+  font-size: calc(0.7em + 2vw);
+}
 .todoList .addTodo {
   position: absolute;
   top: 30px;
   right: 30px;
-  width: 50px;
-  height: 50px;
+  width: calc(30px + 2vw);
+  aspect-ratio: 1;
   border-radius: 50%;
   color: #fff;
   font-size: 1.75em;
   background: #f55050;
   cursor: pointer;
   z-index: 10;
+  animation: moveUpDown 0.6s ease infinite alternate-reverse;
+}
+.todoList .addTodo:hover {
+  animation: none;
+}
+@keyframes moveUpDown {
+  from {
+    transform: translateY(-5px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }/*# sourceMappingURL=Template.css.map */

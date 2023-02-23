@@ -40,30 +40,53 @@ const Template = ({ todos, setTodos }) => {
     );
   };
 
-  return (
-    <div className="todoList">
-      <div className="title">TodoList</div>
-      <div className="listWrap">
-        <TodoList
-          todos={todos}
-          onChangeSelected={onChangeSelected}
-          onInsertToggle={onInsertToggle}
-        />
+  if (todos.length === 0) {
+    return (
+      <div className="todoList">
+        <div className="title">TodoList</div>
+        <div className="listWrap">
+          <h1 className="dummy">일정을 추가해주세요.</h1>
+        </div>
+        {insertToggle && (
+          <TodoInsert
+            onInsertToggle={onInsertToggle}
+            onInsertTodo={onInsertTodo}
+            selected={selected}
+            onRemove={onRemove}
+            onUpdate={onUpdate}
+          />
+        )}
+        <button type="button" className="addTodo" onClick={onInsertToggle}>
+          +
+        </button>
       </div>
-      {insertToggle && (
-        <TodoInsert
-          onInsertToggle={onInsertToggle}
-          onInsertTodo={onInsertTodo}
-          selected={selected}
-          onRemove={onRemove}
-          onUpdate={onUpdate}
-        />
-      )}
-      <button type="button" className="addTodo" onClick={onInsertToggle}>
-        +
-      </button>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div className="todoList">
+        <div className="title">TodoList</div>
+        <div className="listWrap">
+          <TodoList
+            todos={todos}
+            onChangeSelected={onChangeSelected}
+            onInsertToggle={onInsertToggle}
+          />
+        </div>
+        {insertToggle && (
+          <TodoInsert
+            onInsertToggle={onInsertToggle}
+            onInsertTodo={onInsertTodo}
+            selected={selected}
+            onRemove={onRemove}
+            onUpdate={onUpdate}
+          />
+        )}
+        <button type="button" className="addTodo" onClick={onInsertToggle}>
+          +
+        </button>
+      </div>
+    );
+  }
 };
 
 export default Template;
